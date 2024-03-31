@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Js Runner</string>
+    <string name="crash_log">Crash Log</string>
+</resources>

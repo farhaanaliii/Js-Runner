@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <item
+        android:id="@+id/save"
+        android:title="Save"
+		android:icon="@drawable/ic_save"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/run"
+        android:title="Run"
+        android:icon="@drawable/ic_play"
+        app:showAsAction="always"/>
+    <item
+        android:title="Editor Tools">
+        <menu>
+            <item
+                android:id="@+id/theme"
+                android:title="Toggle Theme"/>
+            <item
+                android:id="@+id/line"
+                android:title="Toggle Line Numbers"/>
+            <item
+                android:id="@+id/font"
+                android:title="Toggle Font"/>
+        </menu>
+    </item>
+</menu>

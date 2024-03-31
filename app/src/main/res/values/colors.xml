@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    
+    <color name="BColorComment">#FF818181</color>
+    <color name="BColorKeyword">#FF0096FF</color>
+    <color name="BColorMethods">#FF0096FF</color>
+    <color name="BColorNums">#FFE91E63</color>
+    <color name="BColorOperators">#FF03A9F4</color>
+    <color name="BColorStrings">#FFE91E63</color>
+    <color name="BColorVars">#FF303F9F</color>
+    
+    <color name="DColorComment">#FF808080</color>
+    <color name="DColorKeyword">#FF3EB0EF</color>
+    <color name="DColorMethods">#FF3EB0EF</color>
+    <color name="DColorNums">#FFAE7CBA</color>
+    <color name="DColorOperators">#FFF92667</color>
+    <color name="DColorStrings">#FFA6E22D</color>
+    <color name="DColorVars">#FFFD911F</color>
+    
+</resources>
