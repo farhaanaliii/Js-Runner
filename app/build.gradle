@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
     namespace "com.github.farhanaliofficial.jsrun"
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.github.farhanaliofficial.jsrun"
-        minSdk 21
-        targetSdk 34
+        minSdk 23
+        targetSdk 35
         versionCode 1
         versionName "1.0"
     }
