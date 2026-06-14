@@ -16,11 +16,11 @@ import android.widget.Toast;
 
 public class Utils{
     public static boolean getBoolean(Context context, boolean defaults){
-        SharedPreferences sharedPreferences = context.getSharedPreferences(Constants.SHARED_PREFS, context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = context.getSharedPreferences(Constants.SHARED_PREFS, Context.MODE_PRIVATE);
         return sharedPreferences.getBoolean(Constants.FILE_EXTRACTED, defaults);
     }
     public static void putBoolean(Context context, boolean bool){
-        SharedPreferences sharedPreferences = context.getSharedPreferences(Constants.SHARED_PREFS, context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = context.getSharedPreferences(Constants.SHARED_PREFS, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(Constants.FILE_EXTRACTED,bool);
         editor.apply();
