@@ -52,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
             });
     }
 	@Override
-    public boolean onCreateOptionsMenu(Menu menuu) {
-        getMenuInflater().inflate(R.menu.main_menu, menuu);
-        menu = menuu;
-        MenuItem item = menu.findItem(R.id.save);
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        this.menu = menu;
+        MenuItem item = this.menu.findItem(R.id.save);
         item.setEnabled(false);
         item.getIcon().setAlpha(130);
         return true;
