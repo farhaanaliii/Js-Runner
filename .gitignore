@@ -1,0 +1,90 @@
+
+# Built application files
+/build/
+/app/build/
+
+# Gradle files
+/.gradle/
+/**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Keystore files
+*.jks
+*.keystore
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Android Studio captures
+.gradle/
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.DS_Store
+
+# Log files
+.log
+
+# Android specific
+captures/
+output.json
+generated/
+buildSrc/build/
+
+# Kotlin
+*.kotlin_module
+
+# JetBrains Rider and other
+*.sln
+
+# Crashlytics
+fabric.properties
+
+# NDK
+obj/
+*.obj
+
+# Misc
+*.class
+*.jar
+*.war
+*.ear
+
+# Emulator
+.android/
+
+# Keystore (sensitive)
+*.keystore
+*.jks
+
+# Others
+*.log
+hs_err_pid*
+
+# Flutter or React Native (if present)
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+pubspec.lock
+node_modules/
+
+# Ignore generated Google Services files if you don't want to check them in
+google-services.json
+GoogleService-Info.plist
+
+# Ignore gradle wrapper jar if desired
+gradle-wrapper.jar
+
+# Ignore local env files
+.env
+
+# End of file
