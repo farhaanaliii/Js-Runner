@@ -50,15 +50,15 @@ public class Utils{
         if (!f.exists()) {
             return "";
         }
-        String str="";
-        String sb = "";
+        StringBuilder sb = new StringBuilder();
+        String line;
         try {
             BufferedReader br = new BufferedReader(new FileReader(f));
-            while ((str = br.readLine()) != null) {
-                sb += str + "\n";
+            while ((line = br.readLine()) != null) {
+                sb.append(line).append("\n");
             }
+            br.close();
             return sb.toString();
-
         } catch (Exception e) {
             return e.toString();
         }
