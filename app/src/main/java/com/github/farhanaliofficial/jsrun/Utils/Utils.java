@@ -25,27 +25,6 @@ public class Utils{
         editor.putBoolean(Constants.FILE_EXTRACTED,bool);
         editor.apply();
     }
-    public static void copyFile(Context context,String filename, String outPath) {
-        AssetManager assetManager = context.getAssets();
-        InputStream in;
-        OutputStream out;
-        try {
-            in = assetManager.open(filename);
-            String newFileName = outPath + "/" + filename;
-            out = new FileOutputStream(newFileName);
-
-            byte[] buffer = new byte[1024];
-            int read;
-            while ((read = in.read(buffer)) != -1) {
-                out.write(buffer, 0, read);
-            }
-            in.close();
-            out.flush();
-            out.close();
-        } catch (Exception e) {
-            Log.d("copyFile",e.toString());
-        }
-    }
     public static String readFile(File f) {
         if (!f.exists()) {
             return "";
