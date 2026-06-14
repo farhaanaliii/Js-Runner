@@ -1,23 +1,35 @@
 package com.github.farhanaliofficial.jsrun.views;
 
+import android.annotation.SuppressLint;
 import android.webkit.WebView;
 import android.content.Context;
 import android.util.AttributeSet;
 
-public class CompilerWebView extends WebView{
-    public CompilerWebView(Context context){
+public class CompilerWebView extends WebView {
+
+    public CompilerWebView(Context context) {
         super(context);
         init(context);
     }
-    public CompilerWebView(Context context, AttributeSet attr){
-        super(context,attr);
+
+    public CompilerWebView(Context context, AttributeSet attr) {
+        super(context, attr);
+        init(context);
     }
-    public void init(Context context){
+
+    public CompilerWebView(Context context, AttributeSet attr, int defStyle) {
+        super(context, attr, defStyle);
+        init(context);
+    }
+
+    @SuppressLint("SetJavaScriptEnabled")
+    public void init(Context context) {
         this.getSettings().setJavaScriptEnabled(true);
         this.getSettings().setUseWideViewPort(true);
         this.getSettings().setLoadWithOverviewMode(true);
         this.getSettings().setDomStorageEnabled(true);
-        
+        this.getSettings().setAllowFileAccess(true);
+        this.getSettings().setAllowFileAccessFromFileURLs(true);
+        this.getSettings().setAllowUniversalAccessFromFileURLs(true);
     }
-    
 }

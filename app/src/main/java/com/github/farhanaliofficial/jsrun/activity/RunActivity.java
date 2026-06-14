@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.PersistableBundle;
 import android.os.Bundle;
 import java.io.File;
+import android.net.Uri;
 import com.github.farhanaliofficial.jsrun.Handler.Constants;
 import com.github.farhanaliofficial.jsrun.R;
 import com.github.farhanaliofficial.jsrun.views.CompilerWebView;
@@ -23,7 +24,7 @@ public class RunActivity extends AppCompatActivity {
         web = findViewById(R.id.webView);
         web.init(RunActivity.this);
         File file = new File(getFilesDir(),Constants.WEBVIEW_MAIN_FILE);
-        web.loadUrl(file.getAbsolutePath());
+        web.loadUrl(Uri.fromFile(file).toString());
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
