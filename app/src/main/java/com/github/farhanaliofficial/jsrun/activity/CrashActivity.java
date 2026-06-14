@@ -1,15 +1,12 @@
 package com.github.farhanaliofficial.jsrun.activity;
 
-import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
@@ -17,10 +14,6 @@ import android.widget.HorizontalScrollView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Base64;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CrashActivity extends AppCompatActivity implements MenuItem.OnMenuItemClickListener {
@@ -30,9 +23,8 @@ public class CrashActivity extends AppCompatActivity implements MenuItem.OnMenuI
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setTheme(android.R.style.Theme_DeviceDefault);
         mLog = getIntent().getStringExtra(EXTRA_CRASH_INFO);
-        //stt = mLog;
+
         setContentView: {
             ScrollView contentView = new ScrollView(this);
             contentView.setFillViewport(true);

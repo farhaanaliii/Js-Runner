@@ -1,17 +1,14 @@
 package com.github.farhanaliofficial.jsrun.activity;
-import android.app.Activity;
-import android.os.PersistableBundle;
+
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.view.Gravity;
 import android.widget.ImageView;
-import android.widget.TextView;
 import com.github.farhanaliofficial.jsrun.R;
 import android.os.Handler;
 import com.github.farhanaliofficial.jsrun.Handler.CopyAssets;
 import com.github.farhanaliofficial.jsrun.Utils.Utils;
 import android.content.Intent;
-import com.github.farhanaliofficial.jsrun.activity.MainActivity;
 import android.view.WindowManager;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;

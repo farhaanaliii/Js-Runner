@@ -1,7 +1,5 @@
 package com.github.farhanaliofficial.jsrun.activity;
 
-import android.app.Activity;
-import android.os.PersistableBundle;
 import android.os.Bundle;
 import java.io.File;
 import android.net.Uri;

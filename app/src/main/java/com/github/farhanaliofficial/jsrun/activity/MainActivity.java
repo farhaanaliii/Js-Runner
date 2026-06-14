@@ -1,33 +1,15 @@
 package com.github.farhanaliofficial.jsrun.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.EditText;
 import android.widget.Toast;
 import java.io.File;
-import java.io.IOException;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import java.io.FileWriter;
 import android.text.TextWatcher;
 import android.text.Editable;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileNotFoundException;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import java.io.InputStreamReader;
-import android.util.Log;
-import android.content.res.AssetManager;
-import java.io.InputStream;
-import java.util.Base64;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import java.nio.charset.StandardCharsets;
 import com.github.farhanaliofficial.jsrun.Handler.Constants;
-import com.github.farhanaliofficial.jsrun.Handler.CopyAssets;
 import com.github.farhanaliofficial.jsrun.Utils.Utils;
 import androidx.appcompat.app.AppCompatActivity;
 import com.github.farhanaliofficial.jsrun.R;
@@ -45,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
-		//code = findViewById(R.id.code);
+
         initCodeView();
         init();
 
@@ -57,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onTextChanged(CharSequence p1, int p2, int p3, int p4) {
                     try {
-                        //File f = new File(getFilesDir(), Constants.TMP_JS);
-                        //if(f.createNewFile()){}
                         MenuItem ii = menu.findItem(R.id.save);
                         ii.setEnabled(true);
                         ii.getIcon().setAlpha(255);
