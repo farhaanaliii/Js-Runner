@@ -15,9 +15,9 @@ import java.io.FileWriter;
 import android.widget.Toast;
 
 public class Utils{
-    public static boolean getBoolean(Context context, boolean defaultt){
+    public static boolean getBoolean(Context context, boolean defaults){
         SharedPreferences sharedPreferences = context.getSharedPreferences(Constants.SHARED_PREFS, context.MODE_PRIVATE);
-        return sharedPreferences.getBoolean(Constants.FILE_EXTRACTED, defaultt);
+        return sharedPreferences.getBoolean(Constants.FILE_EXTRACTED, defaults);
     }
     public static void putBoolean(Context context, boolean bool){
         SharedPreferences sharedPreferences = context.getSharedPreferences(Constants.SHARED_PREFS, context.MODE_PRIVATE);
