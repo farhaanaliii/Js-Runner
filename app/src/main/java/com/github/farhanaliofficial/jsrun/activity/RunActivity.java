@@ -7,8 +7,8 @@ import java.io.File;
 import com.github.farhanaliofficial.jsrun.Handler.Constants;
 import com.github.farhanaliofficial.jsrun.R;
 import com.github.farhanaliofficial.jsrun.views.CompilerWebView;
-import android.support.v7.widget.Toolbar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -34,10 +34,8 @@ public class RunActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
-        switch(id){
-            case R.id.refresh:
-                web.reload();
-                break;
+        if (id == R.id.refresh) {
+            web.reload();
         }
         return true;
     }

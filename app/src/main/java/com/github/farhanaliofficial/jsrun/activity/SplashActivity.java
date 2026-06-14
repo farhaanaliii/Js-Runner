@@ -14,7 +14,7 @@ import android.content.Intent;
 import com.github.farhanaliofficial.jsrun.activity.MainActivity;
 import android.view.WindowManager;
 import android.view.View;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
     LinearLayout layout;

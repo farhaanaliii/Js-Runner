@@ -21,7 +21,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Base64;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CrashActivity extends AppCompatActivity implements MenuItem.OnMenuItemClickListener {
     public static final String EXTRA_CRASH_INFO = "crashInfo";

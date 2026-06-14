@@ -29,10 +29,10 @@ import java.nio.charset.StandardCharsets;
 import com.github.farhanaliofficial.jsrun.Handler.Constants;
 import com.github.farhanaliofficial.jsrun.Handler.CopyAssets;
 import com.github.farhanaliofficial.jsrun.Utils.Utils;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import com.github.farhanaliofficial.jsrun.R;
 import com.github.farhanaliofficial.jsrun.views.CodeView;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
     CodeView code;
