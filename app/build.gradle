@@ -1,19 +1,19 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "com.github.farhanaliofficial.jsrun"
-    compileSdk 35
+    namespace = "com.github.farhanaliofficial.jsrun"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId "com.github.farhanaliofficial.jsrun"
-        minSdk 23
-        targetSdk 35
-        versionCode 1
-        versionName "1.0"
+        applicationId = "com.github.farhanaliofficial.jsrun"
+        minSdk = 23
+        targetSdk = 35
+        versionCode = 1
+        versionName = "1.0"
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled = false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
