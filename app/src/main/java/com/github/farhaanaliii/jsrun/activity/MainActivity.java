@@ -6,6 +6,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 import java.io.File;
 import java.io.FileWriter;
+import java.util.Objects;
+
 import android.text.TextWatcher;
 import android.text.Editable;
 import android.content.Intent;
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                     try {
                         MenuItem ii = menu.findItem(R.id.save);
                         ii.setEnabled(true);
-                        ii.getIcon().setAlpha(255);
+                        Objects.requireNonNull(ii.getIcon()).setAlpha(255);
 
                     } catch (Exception e) {
                         Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
@@ -57,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         this.menu = menu;
         MenuItem item = this.menu.findItem(R.id.save);
         item.setEnabled(false);
-        item.getIcon().setAlpha(130);
+        Objects.requireNonNull(item.getIcon()).setAlpha(130);
         return true;
     }
 
@@ -67,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 		if (id == R.id.save){
             try {
                 item.setEnabled(false);
-                item.getIcon().setAlpha(130);
+                Objects.requireNonNull(item.getIcon()).setAlpha(130);
                 File f = new File(getFilesDir(), Constants.TMP_JS);
                 f.createNewFile();
                 Utils.saveFile(f.getAbsolutePath(), code.getText().toString(), this);
