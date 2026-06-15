@@ -1,7 +1,7 @@
-package com.github.farhanaliofficial.jsrun.Utils;
+package com.github.farhaanaliii.jsrun.Utils;
 
 import android.content.SharedPreferences;
-import com.github.farhanaliofficial.jsrun.Handler.Constants;
+import com.github.farhaanaliii.jsrun.Handler.Constants;
 import android.content.Context;
 import android.content.res.AssetManager;
 import java.io.InputStream;

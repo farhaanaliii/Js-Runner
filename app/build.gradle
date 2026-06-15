@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace = "com.github.farhanaliofficial.jsrun"
+    namespace = "com.github.farhaanaliii.jsrun"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.github.farhanaliofficial.jsrun"
+        applicationId = "com.github.farhaanaliii.jsrun"
         minSdk = 23
         targetSdk = 35
         versionCode = 1

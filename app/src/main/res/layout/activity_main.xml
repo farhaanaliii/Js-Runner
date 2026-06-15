@@ -19,7 +19,7 @@
 
 	</com.google.android.material.appbar.AppBarLayout>
 
-    <com.github.farhanaliofficial.jsrun.views.CodeView
+    <com.github.farhaanaliii.jsrun.views.CodeView
 			android:layout_width="match_parent"
 			android:inputType="textNoSuggestions|textMultiLine"
 			android:layout_height="match_parent"

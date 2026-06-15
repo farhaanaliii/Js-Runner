@@ -1,4 +1,4 @@
-package com.github.farhanaliofficial.jsrun.activity;
+package com.github.farhaanaliii.jsrun.activity;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,11 +9,11 @@ import java.io.FileWriter;
 import android.text.TextWatcher;
 import android.text.Editable;
 import android.content.Intent;
-import com.github.farhanaliofficial.jsrun.Handler.Constants;
-import com.github.farhanaliofficial.jsrun.Utils.Utils;
+import com.github.farhaanaliii.jsrun.Handler.Constants;
+import com.github.farhaanaliii.jsrun.Utils.Utils;
 import androidx.appcompat.app.AppCompatActivity;
-import com.github.farhanaliofficial.jsrun.R;
-import com.github.farhanaliofficial.jsrun.views.CodeView;
+import com.github.farhaanaliii.jsrun.R;
+import com.github.farhaanaliii.jsrun.views.CodeView;
 import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {

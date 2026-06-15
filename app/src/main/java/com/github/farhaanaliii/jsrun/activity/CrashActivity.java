@@ -1,4 +1,4 @@
-package com.github.farhanaliofficial.jsrun.activity;
+package com.github.farhaanaliii.jsrun.activity;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;

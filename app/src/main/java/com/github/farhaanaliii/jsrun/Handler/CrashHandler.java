@@ -1,4 +1,4 @@
-package com.github.farhanaliofficial.jsrun.Handler;
+package com.github.farhaanaliii.jsrun.Handler;
 
 import android.app.Activity;
 import android.app.Application;
@@ -34,7 +34,7 @@ import java.io.OutputStream;
 import java.util.Base64;
 import android.os.AsyncTask;
 import android.util.Log;
-import com.github.farhanaliofficial.jsrun.activity.CrashActivity;
+import com.github.farhaanaliii.jsrun.activity.CrashActivity;
 
 public final class CrashHandler {
 	String stt;

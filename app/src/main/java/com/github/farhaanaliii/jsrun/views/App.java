@@ -1,7 +1,7 @@
-package com.github.farhanaliofficial.jsrun.views;
+package com.github.farhaanaliii.jsrun.views;
 
 import android.app.Application;
-import com.github.farhanaliofficial.jsrun.Handler.CrashHandler;
+import com.github.farhaanaliii.jsrun.Handler.CrashHandler;
 
 public class App extends Application {
 

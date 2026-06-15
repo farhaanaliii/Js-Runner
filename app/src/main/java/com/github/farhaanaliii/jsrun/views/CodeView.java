@@ -1,4 +1,4 @@
-package com.github.farhanaliofficial.jsrun.views;
+package com.github.farhaanaliii.jsrun.views;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -23,8 +23,8 @@ import java.util.Objects;
 import java.util.regex.Pattern;
 import android.graphics.Color;
 import java.util.regex.Matcher;
-import com.github.farhanaliofficial.jsrun.R;
-import com.github.farhanaliofficial.jsrun.activity.MainActivity;
+import com.github.farhaanaliii.jsrun.R;
+import com.github.farhaanaliii.jsrun.activity.MainActivity;
 
 public class CodeView extends AppCompatMultiAutoCompleteTextView {
     private static final Pattern PATTERN_COMMENT = Pattern.compile("\\/\\/.*($|\\n)");
