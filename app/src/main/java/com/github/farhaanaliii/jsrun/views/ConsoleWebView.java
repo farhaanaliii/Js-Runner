@@ -5,19 +5,19 @@ import android.webkit.WebView;
 import android.content.Context;
 import android.util.AttributeSet;
 
-public class CompilerWebView extends WebView {
+public class ConsoleWebView extends WebView {
 
-    public CompilerWebView(Context context) {
+    public ConsoleWebView(Context context) {
         super(context);
         init(context);
     }
 
-    public CompilerWebView(Context context, AttributeSet attr) {
+    public ConsoleWebView(Context context, AttributeSet attr) {
         super(context, attr);
         init(context);
     }
 
-    public CompilerWebView(Context context, AttributeSet attr, int defStyle) {
+    public ConsoleWebView(Context context, AttributeSet attr, int defStyle) {
         super(context, attr, defStyle);
         init(context);
     }

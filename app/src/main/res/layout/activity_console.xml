@@ -17,7 +17,7 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
 	</com.google.android.material.appbar.AppBarLayout>
-    <com.github.farhaanaliii.jsrun.views.CompilerWebView
+    <com.github.farhaanaliii.jsrun.views.ConsoleWebView
         android:id="@+id/webView"
         android:layout_height="match_parent"
         android:layout_width="match_parent"/>
