@@ -5,7 +5,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 import java.io.File;
-import java.io.FileWriter;
 import java.util.Objects;
 
 import android.text.TextWatcher;
@@ -17,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.github.farhaanaliii.jsrun.R;
 import com.github.farhaanaliii.jsrun.views.CodeView;
 import androidx.appcompat.widget.Toolbar;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
     CodeView code;
@@ -31,19 +31,18 @@ public class MainActivity extends AppCompatActivity {
 		setSupportActionBar(toolbar);
 
         initCodeView();
-        init();
 
-        String ss = Utils.readFile(new File(getFilesDir(), Constants.TMP_JS));
-        code.setText(ss);
+        String code_text = Utils.readFile(new File(getFilesDir(), Constants.CODE_JS));
+        code.setText(code_text);
         code.addTextChangedListener(new TextWatcher(){
                 @Override
                 public void beforeTextChanged(CharSequence p1, int p2, int p3, int p4) {}
                 @Override
                 public void onTextChanged(CharSequence p1, int p2, int p3, int p4) {
                     try {
-                        MenuItem ii = menu.findItem(R.id.save);
-                        ii.setEnabled(true);
-                        Objects.requireNonNull(ii.getIcon()).setAlpha(255);
+                        MenuItem save_menu = menu.findItem(R.id.save);
+                        save_menu.setEnabled(true);
+                        Objects.requireNonNull(save_menu.getIcon()).setAlpha(255);
 
                     } catch (Exception e) {
                         Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
@@ -70,21 +69,32 @@ public class MainActivity extends AppCompatActivity {
             try {
                 item.setEnabled(false);
                 Objects.requireNonNull(item.getIcon()).setAlpha(130);
-                File f = new File(getFilesDir(), Constants.TMP_JS);
-                f.createNewFile();
-                Utils.saveFile(f.getAbsolutePath(), code.getText().toString(), this);
+                File f = new File(getFilesDir(), Constants.CODE_JS);
+                Utils.writeFile(code.getText().toString(), f.getAbsolutePath());
                 makeToast("Saved!");
             } catch (Exception e) {
                 makeToast(e.toString());
             }
 		} else if (id == R.id.run) {
             try {
-                File f = new File(getFilesDir(), Constants.TMP_JS);
-                f.createNewFile();
-                Utils.saveFile(f.getAbsolutePath(), code.getText().toString(), this);
-            } catch (Exception e) {}
+                String js_code = code.getText().toString();
+                File code_js = new File(getFilesDir(), Constants.CODE_JS);
+                File template_file = new File(getFilesDir(), Constants.WEBVIEW_TEMPLATE);
+                File preview_file = new File(getFilesDir(), Constants.WEBVIEW_MAIN_FILE);
 
-            startActivity(new Intent(MainActivity.this, RunActivity.class));
+                Utils.writeFile(js_code, code_js.getAbsolutePath());
+                
+                String html_template = Utils.readFile(template_file);
+                if (!html_template.isEmpty()) {
+                    String html = html_template.replace("__USER_SCRIPT__", js_code);
+                    Utils.writeFile(html, preview_file.getAbsolutePath());
+                }
+
+            } catch (Exception e) {
+                makeToast(e.toString());
+            }
+
+            startActivity(new Intent(MainActivity.this, ConsoleActivity.class));
         }
         else if(id == R.id.theme){
             if(code.currentTheme == 1){
@@ -116,23 +126,8 @@ public class MainActivity extends AppCompatActivity {
 		return true;
 	}
 	public void makeToast(String text) {
-		Toast.makeText(MainActivity.this, text, 0).show();
+		Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
 	}
-    private void init() {
-        String sb = Utils.readFile(new File(getFilesDir(), "js/" + Constants.ERUDA_JS));
-        try {
-            File ff = new File(getFilesDir(), Constants.ERUDA_JS);
-            if (ff.createNewFile()) {
-                return;
-            }
-            FileWriter fw = new FileWriter(ff.getAbsolutePath());
-            fw.write(sb.toString());
-            fw.close();
-        } catch (Exception e) {
-            code.setText(e.toString());
-            makeToast(e.toString());
-        }
-    }
     public static float getTextSize() {
         return textSize;
     }

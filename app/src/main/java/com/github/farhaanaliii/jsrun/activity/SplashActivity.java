@@ -4,13 +4,17 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.view.Gravity;
 import android.widget.ImageView;
+
+import com.github.farhaanaliii.jsrun.Handler.Constants;
 import com.github.farhaanaliii.jsrun.R;
 import android.os.Handler;
 import com.github.farhaanaliii.jsrun.Handler.CopyAssets;
 import com.github.farhaanaliii.jsrun.Utils.Utils;
 import android.content.Intent;
+import java.io.File;
 import android.view.WindowManager;
 import android.view.View;
+import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
@@ -36,27 +40,21 @@ public class SplashActivity extends AppCompatActivity {
         layout.addView(imageView);
         
         setContentView(layout);
-        fileExtracted = Utils.getBoolean(this, false);
+        fileExtracted = Utils.getBoolean(this, Constants.DATA_EXTRACTED, false);
         if(!fileExtracted) {
-            new Thread(new Runnable(){
-                    @Override
-                    public void run() {
-                        copy_assets.setCtx(getApplicationContext());
-                        copy_assets.setFromPathDirectoryAssets("js");
-                        copy_assets.setToDirectoryTarget(getFilesDir().getPath());
-                        copy_assets.start();
-                    }
-                }).start();
-            fileExtracted = true;
-            Utils.putBoolean(this, fileExtracted);
+            new Thread(() -> {
+                copy_assets.setCtx(getApplicationContext());
+                copy_assets.setFromPathDirectoryAssets("data");
+                copy_assets.setToDirectoryTarget(getFilesDir().getPath());
+                copy_assets.start();
+                
+                Utils.putBoolean(this, Constants.DATA_EXTRACTED, true);
+            }).start();
         }
-        new Handler().postDelayed(new Runnable(){
-            @Override
-            public void run(){
-                startActivity(new Intent(SplashActivity.this,MainActivity.class));
-                finish();
-            }
-       }, 3000);
+        new Handler().postDelayed(() -> {
+            startActivity(new Intent(SplashActivity.this,MainActivity.class));
+            finish();
+        }, 3000);
 
     }
 }
