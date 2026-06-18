@@ -87,4 +87,5 @@ gradle-wrapper.jar
 # Ignore local env files
 .env
 
+temp
 # End of file
